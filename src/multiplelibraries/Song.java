@@ -46,7 +46,7 @@ public class Song implements Comparable {
 
 	}
 
-	public String display() {
+	public String displays() {
 		return "name=" + name + ", author=" + author + ", date_of_Release=" + date_of_Release + ", movie_Name="
 				+ movie_Name;
 	}

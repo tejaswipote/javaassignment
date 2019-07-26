@@ -14,9 +14,6 @@ public class MainClass {
 			System.out.print((i + 1) + ". " + song.get(i).getName() + "\n");
 	}
 
-	public static void display(Song s) {
-		s.display();
-	}
 
 	public static void displayAllAlbums(List<Library> list) {
 
@@ -47,7 +44,7 @@ public class MainClass {
 				System.out.print("Album Name : " + l.get(i).albums.get(j).getAName() + "\n");
 				for (int k = 0; k < 3; k++) {
 					System.out.print(l.get(i).albums.get(j).song.get(k)
-							.display());
+							.displays());
 					System.out.println();
 				}
 			}
@@ -199,7 +196,7 @@ public class MainClass {
 		else
 
 		{
-			display(libraries.get(choice - 1).albums.get(choice2 - 1).song.get(choice3 - 1));
+			System.out.println(libraries.get(choice - 1).albums.get(choice2 - 1).song.get(choice3 - 1).displays());
 		}
 	}
 
