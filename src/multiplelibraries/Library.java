@@ -2,11 +2,11 @@ package multiplelibraries;
 
 import java.util.*;
 
-public class Library implements Comparable {
+public class Library implements Comparable<Library> {
 
 	private String lname;
 
-	public List<Album> albums = new ArrayList<Album>();
+	private List<Album> albums = new ArrayList<Album>();
 
 	Library(String name) {
 		this.lname = name;
@@ -14,7 +14,7 @@ public class Library implements Comparable {
 	}
 
 	@Override
-	public int compareTo(Object libraries) {
+	public int compareTo(Library libraries) {
 		// TODO Auto-generated method stub
 
 		return lname.compareTo(((Library) libraries).lname);
@@ -24,6 +24,13 @@ public class Library implements Comparable {
 	public String getLName() {
 		// TODO Auto-generated method stub
 		return this.lname;
+	}
+
+	/**
+	 * @return the albums
+	 */
+	public List<Album> getAlbums() {
+		return albums;
 	}
 
 }

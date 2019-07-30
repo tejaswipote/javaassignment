@@ -5,17 +5,12 @@ import java.util.List;
 
 public class Album implements Comparable<Album> {
 	private String aname;
-	public List<Song> song = new ArrayList<>();
+	private List<Song> song = new ArrayList<>();
 	int index = 0;
 
 	Album(String name) {
 		this.aname = name;
 
-	}
-
-	// special setters: adding new song
-	public void addSong(Song newSong) {
-		song.add(newSong);
 	}
 
 	public String getAName() {
@@ -28,4 +23,10 @@ public class Album implements Comparable<Album> {
 		return this.getAName().compareTo(album.getAName());
 	}
 
+	/**
+	 * @return the song
+	 */
+	public List<Song> getSong() {
+		return song;
+	}
 }
