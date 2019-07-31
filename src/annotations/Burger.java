@@ -1,7 +1,7 @@
 package annotations;
 
 @Food(name = "Burger", price = 200)
-public class Burger implements FoodClass{
+public class Burger implements FoodInterface{
 
 	private String name;
 	private int price;

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class FoodExecutor {
 
 	public static void main(String[] args) {
-		List<FoodClass> foods = new ArrayList();
+		List<FoodInterface> foods = new ArrayList();
 
 		Pizza p = new Pizza();
 		Burger b = new Burger();
@@ -17,16 +17,15 @@ public class FoodExecutor {
 		performAction(foods);
 	}
 
-//		p.setName("corn pizza");
-//		p.setPrice(120);
-//		p.setPrepareTime(201);
-//		p.setCookTime(310);
-//		p.setSendTime(140);
-//		System.out.println(p.toString());
 
-	public static void performAction(List<FoodClass> food) {
-		for (FoodClass p : food) {
+	
+	//method for displaying annotations
+	public static void performAction(List<FoodInterface> food) {
+		for (FoodInterface p : food) {
+			//get the class type
 			Class c = p.getClass();
+			
+			//Create the annotations object
 			Annotation annotation = c.getAnnotation(Food.class);
 			Food foods = (Food) annotation;
 			System.out.println("Food Name : " + foods.name());

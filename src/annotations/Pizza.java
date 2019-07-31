@@ -1,78 +1,77 @@
 package annotations;
 
+/**
+ * This is class for a specific food
+ * @author tejaswi.pote
+ *
+ */
 @Food(name="Pizza", price=300)
-public class Pizza implements FoodClass{
+public class Pizza implements FoodInterface{
 	private String name;
 	private int price;
 	private int prepareTime;
 	private int cookTime;
 	private int sendTime;
-	/**
-	 * @return the name
-	 */
-	public String getName() {
+	
+	 // This method return the name
+	 public String getName() {
 		return name;
 	}
-	/**
-	 * @param name the name to set
-	 */
-	public void setName(String name) {
+	
+	//  This method set the name to argument
+	 public void setName(String name) {
 		this.name = name;
 	}
-	/**
-	 * @return the price
-	 */
-	public int getPrice() {
+	
+	//  This method return the price
+	 public int getPrice() {
 		return price;
 	}
 	
 	
-	/**
-	 * @param price the price to set
-	 */
-	public void setPrice(int price) {
+	
+	 //This method set the price to argument
+	 public void setPrice(int price) {
 		this.price = price;
 	}
-	/**
-	 * @return the prepareTime
-	 */
 	
+	// This method return  the prepareTime
 	@Time(prepareTime = 20, cookTime = 30, sendTime = 40)
 	public int getPrepareTime() {
 		return prepareTime;
 	}
-	/**
-	 * @param prepareTime the prepareTime to set
-	 */
-	public void setPrepareTime(int prepareTime) {
+	
+	 //This method set the prepareTime to argument
+	 public void setPrepareTime(int prepareTime) {
 		this.prepareTime = prepareTime;
 	}
-	/**
-	 * @return the cookTime
-	 */
+	
+	// this method return the cookTime
+	 
 	
 	public int getCookTime() {
 		return cookTime;
 	}
-	/**
-	 * @param cookTime the cookTime to set
-	 */
+	
+	 // This method set the cookTime to argument
+	 
 	public void setCookTime(int cookTime) {
 		this.cookTime = cookTime;
 	}
-	/**
-	 * @return the sendTime
-	 */
+	
+	 //  This method return the sendTime
+	 
 	
 	public int getSendTime() {
 		return sendTime;
 	}
-	/**
-	 * @param sendTime the sendTime to set
-	 */
+	
+	 // This method set the sendTime to argument
 	public void setSendTime(int sendTime) {
 		this.sendTime = sendTime;
 	}
+	
+	//This is overrided metnod
 	@Override
 	public String toString() {
 		return " food name=" + name + "\n price=" + price + "\n prepareTime=" + prepareTime + "\n cookTime=" + cookTime
